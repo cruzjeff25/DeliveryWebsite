@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="nav_bar">
+            <ul>
+                <a href="#home"><img src="/img/logo.png" alt="logo" width="110px"></a>
+                <li><a href="#home" onclick=toggleMenu();>Home</a></li>
+                <li><a href="about.html" onclick=toggleMenu();>About</a></li>
+                <li class="booknow" onclick=toggleMenu();><a href="#services">BOOK NOW</a></li> 
+                <li><a href="#contact" onclick=toggleMenu();>Contact</a></li>
+                <li><a href="#signUp" onclick="signUp(); toggleMenu();">Sign Up</a></li>
+            </ul>
+    </nav>    
+        <!-- mobile menu button -->
+        <div class="burger" onclick=toggleMenu();>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+       
+
+    <!-- Section 1 -->
+    <div class="container" id="home">
+        <div class="row">
+            <div class="col5">
+                <div id="section1_left">
+                    <h1>Delivery Company Name</h1>
+                    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit</h2>
+                    <form>
+                        <label for="Username">Username:</label><br>
+                        <input type="text" placeholder="Username"><br>
+                        <label for="Password">Password:</label><br>
+                        <input type="password" placeholder="Password"><br>
+                        <input type="submit" value="Log In">
+                        <p>Don't have an account? <a href="#signUp" onclick="signUp();">Create Account</a></p>
+                    </form>
+                </div>
+            </div>
+            <div class="col5">
+                <div id="section1_right">
+                    <img class="night" src="/img//247.png" onclick="nightMode();" alt="night"><br>
+                    <img class="delivery" src="/img/1.png" alt="delivery">
+                </div>
+            </div >
+        </div>
+    </div>
+    <!-- Section 2 -->
+   <div class="container2" id="services">
+       <div class="row">
+            <div class="title">
+                <h1>Services</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus sapiente enim quas?</p>
+            </div>
+            <div class="col5" id="premium">
+                <div class="box">
+                    <div>
+                        <h2>Standard Delivery</h2>
+                        <img src="/img/standard.png" alt="Standard" width="250px">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius, accusamus!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col5">
+                <div class="box">
+                    <div>
+                        <h2>Premium Delivery</h2>
+                        <img src="/img/premium.png" alt="Premium" width="250px">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, tempore.</p>
+                    </div>
+                </div>
+            </div>
+       </div>
+   </div>
+   <hr>
+
+    <!-- Section 3 -->
+   <div class="container3"  id="contact">
+        <div class="row">
+            <div class="col5">
+                <img src="/img/contact.svg" alt="img">
+            </div>
+            <div class="col5">
+                <h1>Contact Us</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus sapiente enim quas?</p>
+                <form>
+                    <div class="contact_box">
+                        <label class="name">Name:</label><br>
+                        <input type="text" placeholder="Name"><br>
+                        <label>Email:</label><br>
+                        <input type="text" placeholder="Email"><br>
+                        <label>Subject:</label><br>
+                        <input type="text" placeholder="Subject"><br>
+                        <label>Message:</label><br>
+                        <textarea name="Text1" cols="40" rows="5" placeholder="Your Message"></textarea>
+                        <input type="submit" value="Send">
+                    </div>
+                </form>
+            </div>
+        </div>
+   </div>
+   
+   <!-- Sign Up modal -->
+   <div class="modal_container">   
+        <form>
+            <img id="close_bttn" src="/img/close-cross.svg" alt="x" width="28px"  onclick="signUp()">
+            <h1>Create your account</h1><br>
+            <p>Create an account and start booking your packages</p>
+            <input type="text" placeholder="FirstName"><br>
+            <input type="text" placeholder="LastName"><br>
+            <input type="text" placeholder="Email"><br>
+            <input type="text" placeholder="Username"><br>
+            <input type="text" placeholder="Password"><br>
+            <input type="text" placeholder="Confirm Password"><br>
+            <input class="submit" type="submit" value="Sign Up">
+            <p>Already have an account? <a href="#home" onclick="signUp();">Log in</a></p>
+        </form>
+   </div>
+
+   <footer>
+       <hr>
+       <div class="row">
+           <div class="col2">
+                <ul>
+                    <h2>Company</h2>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">News</a></li>
+                </ul>
+           </div>
+           <div class="col2">
+                <ul>
+                    <h2>Support</h2>
+                    <li><a href="">Help</a></li>
+                    <li><a href="">QA</a></li>
+                    <li><a href="">Office</a></li>
+                </ul>
+          </div>
+        </div>
+   </footer>
+<script src="/script.js"></script>
+</body>
+</html>
