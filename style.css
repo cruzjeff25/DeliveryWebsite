@@ -345,7 +345,7 @@ footer li a{
     100%{opacity: 1;}
 }
 @keyframes about_anim{
-    0%{margin-left: 30%; opacity: .1;}
+    0%{margin-left: 45%; opacity: .2;}
     100%{margin-left: 0; opacity: 1;}
 }
 @keyframes index_anim{
