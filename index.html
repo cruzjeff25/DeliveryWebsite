@@ -56,24 +56,26 @@
        <div class="row">
             <div class="title">
                 <h1>Services</h1>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus sapiente enim quas?</p>
+                <p class="label">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus sapiente enim quas?</p>
             </div>
-            <div class="col5" id="premium">
-                <div class="box">
+            <div class="col5">
+                <div class="box" onclick="standard()">
                     <div>
                         <h2>Standard Delivery</h2>
                         <img src="/img/standard.png" alt="Standard" width="250px">
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius, accusamus!</p>
+                        <p><strong>Delivery Bike: </strong> For small packages</p>
+                        <p><strong>Weight Limit: </strong>Up to 20kg</p>
                     </div>
                 </div>
             </div>
 
             <div class="col5">
-                <div class="box">
+                <div class="box" onclick="premium()">
                     <div>
                         <h2>Premium Delivery</h2>
                         <img src="/img/premium.png" alt="Premium" width="250px">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, tempore.</p>
+                        <p><strong>Delivery Truck: </strong>For medium to large packages</p>
+                        <p><strong>Weight Limit: </strong>Up to 2000kg</p>
                     </div>
                 </div>
             </div>
@@ -106,7 +108,36 @@
             </div>
         </div>
    </div>
-   
+    <!-- Standard Delivery modal-->
+    <div class="standard_container" >
+        <form>
+            <img id="close_bttn" src="/img/close-cross.svg" alt="x" width="28px"  onclick="standard()">
+            <h1>Standard Delivery</h1>
+            <p>Pick Up Address:</p>
+            <input type="text" placeholder="location 1">
+            <p>Drop Off Address:</p>
+            <input type="text" placeholder="location 2">
+            <p>Mobile Number:</p>
+            <input type="text" value="09">
+            <textarea cols="40" rows="5" placeholder="Delivery Note"></textarea>
+            <input type="submit" value="Book">
+        </form>
+    </div>
+    <!-- Standard Delivery modal-->
+    <div class="premium_container" >
+        <form>
+            <img id="close_bttn" src="/img/close-cross.svg" alt="x" width="28px"  onclick="premium()">
+            <h1>Premium Delivery</h1>
+            <p>Pick Up Address:</p>
+            <input type="text" placeholder="location 1">
+            <p>Drop Off Address:</p>
+            <input type="text" placeholder="location 2">
+            <p>Mobile Number:</p>
+            <input type="text" value="09">
+            <textarea cols="40" rows="5" placeholder="Delivery Note"></textarea>
+            <input type="submit" value="Book">
+        </form>
+    </div>
    <!-- Sign Up modal -->
    <div class="modal_container">   
         <form>
@@ -120,7 +151,7 @@
             <input type="text" placeholder="Password"><br>
             <input type="text" placeholder="Confirm Password"><br>
             <input class="submit" type="submit" value="Sign Up">
-            <p>Already have an account? <a href="#home" onclick="signUp();">Log in</a></p>
+            <p>Already have an account? <a href="#home" onclick="signUp()">Log in</a></p>
         </form>
    </div>
 
